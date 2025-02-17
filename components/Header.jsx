@@ -1,9 +1,15 @@
 import Link from "next/link";
+import { PiSignInBold } from "react-icons";
+import HeaderItem from "./HeaderItem";
 
 function Header() {
   return (
     <div className="mx-2 flex max-w-6xl items-center justify-between py-6 sm:mx-auto">
-      <div className="flex">HeaderItem home HeaderItem about</div>
+      <div className="flex">
+        <HeaderItem title="Sign in" address={"/sign-in"} />
+        <HeaderItem title="Home" address={"/"} />
+        <HeaderItem title="About" address={"/About"} />
+      </div>
       <div className="flex items-center space-x-5">
         darkMode
         <Link href="/">
