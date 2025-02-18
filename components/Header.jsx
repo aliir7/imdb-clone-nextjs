@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { PiSignInBold } from "react-icons";
+import { PiSignIn } from "react-icons/pi";
 import HeaderItem from "./HeaderItem";
+import DarkModeSwitch from "./ThemeProvider/DarkModeSwitch";
 
 function Header() {
   return (
@@ -11,7 +12,7 @@ function Header() {
         <HeaderItem title="About" address={"/About"} />
       </div>
       <div className="flex items-center space-x-5">
-        darkMode
+        <DarkModeSwitch />
         <Link href="/">
           <h2 className="text-2xl">
             <span className="me-1 rounded-lg bg-amber-500 px-2 py-1 font-bold">
