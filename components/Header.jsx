@@ -7,12 +7,12 @@ function Header() {
   return (
     <div className="mx-2 flex max-w-6xl items-center justify-between py-6 sm:mx-auto">
       <div className="flex">
-        <HeaderItem
-          title="Sign in"
-          address={"/sign-in"}
-          SignedIn={SignedIn}
-          UserButton={UserButton}
-        />
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <HeaderItem title="Sign in" address={"/sign-in"} />
+        </SignedOut>
         <HeaderItem title="Home" address={"/"} />
         <HeaderItem title="About" address={"/About"} />
       </div>
