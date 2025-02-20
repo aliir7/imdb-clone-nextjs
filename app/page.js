@@ -1,6 +1,6 @@
 import Results from "@/components/Results";
 import Image from "next/image";
-
+const API_KEY = process.env.API_KEY;
 export default async function Home({ searchParams }) {
   const genre = searchParams.genre || "fetchTrending";
   const res = await fetch(
